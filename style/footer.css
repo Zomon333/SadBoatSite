@@ -1,0 +1,28 @@
+.footer{
+    width:110%;
+    margin-left:-9.6%;
+    background-color: #28AE9F;
+
+    
+    clip:rect(0%,100%,100%,0%);
+    bottom:-8%;
+
+    z-index:-1;
+}
+.legal
+{
+    margin-top:-1%;
+    background-color:#503A82;
+    padding-bottom:5%;
+    height:200px;
+    bottom:-5%;
+    margin-bottom:-6%;
+    z-index:-1;
+}
+.legalcontents
+{
+    padding-top:10%; 
+    padding-right:3%;
+    z-index:1; 
+    text-align: center;
+}
