@@ -50,8 +50,8 @@
     display: block;
     color: white;
     text-align: center;
-    letter-spacing: 1.5px;
-    padding: 14px 16px;
+    letter-spacing: 0.03em;
+    padding: 0.75em 0.8em;
     text-decoration: none;
   }
   
@@ -60,7 +60,7 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 80px;
+    padding: 0.75em 5em;
     text-decoration: none;
 }
 

@@ -1,7 +1,7 @@
 
 .splashdiv
 {
-    padding-top: 50px;
+    padding-top: 3%;
     padding-bottom: 20%;
 }
 .splash
@@ -11,20 +11,20 @@
     margin-left:5%;
     float:left;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 0.03em;
     line-height:1.75;
     text-align:center;
 
-    font-size:50px;
+    font-size:3em;
     font-weight:100;
 }
 .splashrule
 {
     width:125%;
-    height:5px;
+    height:0.125em;
     margin-left: -12.5%;
 
-    border-radius: 3px;
+    border-radius: 1em;
 
     background-color: #000000;
     border: 0 none;  
