@@ -1,0 +1,175 @@
+
+
+
+
+            @media screen and (max-width: 761px)
+            {
+                * {
+                    margin: 0;
+                    padding: 0;
+                    float: left;
+                    line-height: 1.5;
+                    vertical-align: middle;
+                    text-align:center;
+                }
+
+                .desktop{       display: none; visibility: hidden; }
+                .navLink{	    display: none; visibility: hidden; }
+                .pageBreakLg{	display: none; visibility: hidden; }
+                .cardSpaceLg{	display: none; visibility: hidden; }
+
+                html, body
+                {
+                    max-width: 100%;
+                    overflow-x: hidden;
+                }
+
+                .navLinkLogo
+                {
+                    width: 25vw;
+                    height: 6vh;
+
+                    padding-top:3vh;
+
+                }
+
+                .navFiller
+                {	
+                    width: 50vw;
+                    height: 6vh;
+
+                    padding-top:3vh;
+                }
+
+                .navDrop
+                {	
+                    width: 25vw;
+                    height: 6vh;
+
+                    padding-top:3vh;
+                }
+
+                .navDropContent
+                {
+                    width: 25vw;
+                    height: 6vh;
+
+                    padding-top:3vh;
+                }
+
+                .splashMargin
+                {
+                    width: 20vw;
+                    height: 20vh;
+                }
+
+                .splashCont
+                {
+                    width: 60vw;
+                    height: 20vh;
+                }
+                
+                .pageSection
+                {
+                    width: 100vw;
+                }
+
+                .break
+                {
+                    height: 5vh;
+                }
+                
+                .cardSpaceSm
+                {
+                    width: 14vw;
+                    height: 30vh;
+                    text-align: left;
+                    line-height: 1.0;
+                }
+                
+                .cardBack
+                {
+                    width: 72vw;
+                    height: 30vh;
+                    text-align: left;
+                    line-height: 1.0;
+                    overflow:scroll;
+                }
+
+                
+
+                .cardName
+                {
+                    margin-left:4%;
+                    margin-top:4%;
+                    margin-bottom: 8%;
+                    width:96%;
+                    text-align: left;
+                    line-height: 1.0;
+                }
+                
+                .cardRoles
+                {
+                    margin-left:4%;
+                    margin-bottom: 11%;
+                    width:96%;
+                    text-align: left;
+                    line-height: 1.0;
+                }
+
+                .cardContact
+                {
+                    margin-left:4%;
+                    margin-bottom: 4%;
+                    width: 96%;
+                    text-align: left;
+                    line-height: 1.0;
+                }
+                
+                .cardEmail
+                {
+                    margin-left:4%;
+                    margin-bottom: 8%;
+                    width: 96%;
+                    text-align: left;
+                    line-height: 1.0;
+                    
+                }
+                
+                .footerCurve
+                {
+                    width: 100vw;
+                    height: 10vh;
+                }
+                
+                .footerMargin
+                {
+                    width: 20vw;
+                    height: 10vh;
+                }
+
+                .footerSpacing
+                {
+                    width: 10vw;
+                    height: 10vh;
+                }
+
+                .footerLink
+                {
+                    width: 16.666666666666667vw;
+                    height: 10vh;
+                    z-index: 1;
+                }
+
+                .footerFiller
+                {
+                    width: 100vw;
+                    height: 10vh;
+                }
+
+                .nav
+                {
+                    width: 100vw;
+                    height: 9vh;
+                }
+            }

@@ -4,7 +4,9 @@
         margin: 0;
         padding: 0;
         float: left;
-        outline: 0.01vw solid red;
+        line-height: 1.5;
+        vertical-align: middle;
+        text-align:center;
     }
 
     html, body
@@ -12,6 +14,7 @@
         max-width: 100%;
         overflow-x: hidden;
     }
+
     .pageBreakSm, .cardSpaceSm, .navDrop, .navDropContent, .mobile
     {
         display:none; 
@@ -20,12 +23,15 @@
 
     .navLinkLogo
     {	
-        width: 10vw;
+        width: 7vw;
+        padding-top:3vh;
     }
     .navLink
     {
         width: 10vw;
-        height: 5vh;
+        height:3vh;
+        padding-top:1vh;
+        padding-bottom:1vh;
     }
     .navFiller
     {
@@ -54,6 +60,11 @@
         height: 10vh;
     }
 
+    .longBreak
+    {
+        height: 35vh;
+    }
+
     .cardSpaceLg
     {
         width: 4.1666667vw;
@@ -64,7 +75,48 @@
     {
         width: 25vw; 
         height: 30vh;
+        z-index: 2;
     }
+
+    .cardName
+    {
+        margin-left:4%;
+        margin-top:4%;
+        margin-bottom: 8%;
+        width:96%;
+        text-align: left;
+        line-height: 1.0;
+    }
+    
+    .cardRoles
+    {
+        margin-left:4%;
+        margin-bottom: 11%;
+        width:96%;
+        text-align: left;
+        line-height: 1.0;
+    }
+
+    .cardContact
+    {
+        margin-left:4%;
+        margin-bottom: 4%;
+        width: 96%;
+        text-align: left;
+        line-height: 1.0;
+    }
+    
+    .cardEmail
+    {
+        margin-left:4%;
+        margin-bottom: 8%;
+        width: 96%;
+        text-align: left;
+        line-height: 1.0;
+        
+    }
+ 
+
 
     .footerCurve
     {
@@ -84,8 +136,10 @@
     }
     .footerLink
     {
+        padding-top:4vh;
         width: 10vw;
         height:8vh;
+        z-index: 1;
     }
     .footerFiller
     {
