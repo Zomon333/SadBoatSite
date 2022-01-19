@@ -1,0 +1,96 @@
+@media screen and (min-width: 762px)
+{
+    * {
+        margin: 0;
+        padding: 0;
+        float: left;
+        outline: 0.01vw solid red;
+    }
+
+    html, body
+    {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .pageBreakSm, .cardSpaceSm, .navDrop, .navDropContent, .mobile
+    {
+        display:none; 
+        visibility: hidden;
+    }
+
+    .navLinkLogo
+    {	
+        width: 10vw;
+    }
+    .navLink
+    {
+        width: 10vw;
+        height: 5vh;
+    }
+    .navFiller
+    {
+        width: 40vw;
+        height: 5vh;
+    }
+
+    .splashMargin
+    {
+        width: 20vw;
+        height: 30vh;
+    }
+    .splashCont
+    {
+        width: 30vw;
+        height: 30vh;
+    }
+
+    .pageSection
+    {
+        width: 100vw;
+    }
+
+    .break
+    {
+        height: 10vh;
+    }
+
+    .cardSpaceLg
+    {
+        width: 4.1666667vw;
+        height: 30vh;
+    }
+
+    .cardBack
+    {
+        width: 25vw; 
+        height: 30vh;
+    }
+
+    .footerCurve
+    {
+        width: 100vw;
+        height: 20vh;
+    }
+
+    .footerMargin
+    {
+        width: 50vw;
+        height:8vh;
+    }
+    .footerSpacing
+    {
+        width: 5vw;
+        height:8vh;
+    }
+    .footerLink
+    {
+        width: 10vw;
+        height:8vh;
+    }
+    .footerFiller
+    {
+        width: 100vw;
+        height:8vh;
+    }
+
+}
