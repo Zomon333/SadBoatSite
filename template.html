@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no">
         <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-        
+        <link rel="icon" href="icon.ico">
+
+        <script src="https://kit.fontawesome.com/eba8de4932.js" crossorigin="anonymous"></script>
+        <script src="menucontrol.js"></script>
+
 
         <link rel="stylesheet" href="style/desktop.css">
         <link rel="stylesheet" href="style/mobile.css">
@@ -15,8 +19,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     </head>
+        
     <body class="">
-        <div class="desktop">
+
+
+
+        <section class="desktop">
             <nav class="pageSection nav bPurple">
                 <strong>
                     <div class="navLink">
@@ -43,11 +51,19 @@
                 </strong>
             </nav>
             
-            <div class="pageBreak bTeal">
+            <div class="pageSection bTeal">
                 
-
-
             </div>
+
+            <div class="pageSection break bTeal">
+                <hr class="rule">
+            </div>
+
+            <div class="pageSection bTeal">
+                
+            </div>
+
+            <div class="pageSection longBreak bTeal"></div>
 
             <div class="pageSection bPurple">
                 <strong>
@@ -92,9 +108,10 @@
                 </strong>
             </div>
         
-        </div>
+        </section>
 
-        <div class="mobile">
+
+        <section class="mobile">
             <nav class="pageSection nav bPurple">
                 <strong>
                     <div class="navLinkLogo">
@@ -103,8 +120,41 @@
 
                     <div class="navFiller"></div>
 
+                    <style>
+
+                    </style>
+
+                    <script>
+                        
+                    </script>
+
                     <div div class="navDrop">
-                        navDrop
+                        <!-- The overlay -->
+                        <div id="myNav" class="overlay">
+
+                            <!-- Button to close the overlay navigation -->
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        
+                            <!-- Overlay content -->
+                            <div class="overlay-content">
+                                    <table>
+                                        <div class="pageSection break navSection"><a href="#">Home</a></div>
+                                        <div class="pageSection break navSection"><a href="#">News</a></div>
+                                        <div class="pageSection break navSection"><a href="#">About Us</a></div>
+                                        <div class="pageSection break navSection"><a href="#">Contact Us</a></div>
+                                        <div class="pageSection break navSection"><a href="#">Store</a></div>
+                                    </table>
+                            </div>
+                        
+                        </div>
+                        
+                        <!-- Use any element to open/show the overlay navigation menu -->
+                        <span onclick="openNav()"> 
+                            <div id="menuButton" class="container" onclick="menuSwap(this)">
+                                <i id="closedMenu" class="fa-solid fa-bars fa-2x closedMenu"></i>
+                                <i id="openMenu" class="fa-solid fa-greater-than-equal fa-2x openMenu"></i>
+                          </div> </span> 
+                       
                     </div>
                 </strong>
             </nav>
@@ -142,6 +192,7 @@
             <div class="pageSection bTeal">
                 <div class="cardSpaceSm"></div>
 
+                <div class="cardLine"> test </div>
                 <div class="cardBack bWhite">
                     <p class="cardName"><strong>Dagan Poulin</strong></p>
                     <p class="cardRoles">Developer, Programmer, Web Designer</p>
@@ -158,6 +209,7 @@
             <div class="pageSection bTeal">
                 <div class="cardSpaceSm"></div>
 
+                <div class="cardLine"> test </div>
                 <div class="cardBack bWhite">
                     <p class="cardName"><strong>Justice Guillory</strong></p>
                     <p class="cardRoles">Developer, Programmer, Physics Specialist</p>
@@ -174,6 +226,7 @@
             <div class="pageSection bTeal">
                 <div class="cardSpaceSm"></div>
 
+                <div class="cardLine"> test</div>
                 <div class="cardBack bWhite">
                     <p class="cardName"><strong>We're currently looking for</strong><strong>artists and musicians.</strong></p>
                     <p class="cardRoles">We're looking to commission artists and musicians with flexible work requirements.</p>
@@ -230,7 +283,8 @@
                 <div class="footerFiller"></div>
 
             </div>
-        </div>
+        </section>
 
+        
     </body>
 </html>
