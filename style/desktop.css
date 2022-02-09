@@ -9,6 +9,8 @@
         text-align:center;
     }
 
+    
+
     html, body
     {
         max-width: 100%;
@@ -36,6 +38,15 @@
         height:3vh;
         padding-top:1vh;
         padding-bottom:1vh;
+        cursor:pointer;
+    }
+    .navLinkContent
+    {
+        width: 100%;
+        height:100%;
+        color:#f1f1f1;
+        text-decoration:none;
+
         cursor:pointer;
     }
     .navFiller
@@ -147,6 +158,8 @@
     {
         padding-top:4vh;
         width: 10vw;
+        color:#f1f1f1;
+        text-decoration:none;
         height:8vh;
         z-index: 1;
         cursor: pointer;

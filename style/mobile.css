@@ -24,6 +24,10 @@
                     overflow-x: hidden;
                 }
 
+                .logo{
+                    width:100%;
+                }
+
                 .navLinkLogo
                 {
                     width: 25vw;
@@ -64,6 +68,7 @@
                 .splashCont
                 {
                     width: 60vw;
+                    margin-bottom:5vh;
                     height: 20vh;
                 }
                 
@@ -158,6 +163,8 @@
                 .footerLink
                 {
                     width: 16.666666666666667vw;
+                    color: #f1f1f1;
+                    text-decoration: none;
                     height: 10vh;
                     z-index: 1;
                 }
