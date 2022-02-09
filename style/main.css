@@ -55,6 +55,19 @@ h1
     color:white;
 }
 
+.pageBreak
+{
+    width:100vw;
+    height:150vh;
+}
+
+.cardLine
+{
+    background-color: #000000;
+    height: 30vh;
+}
+
+
 .bDPurple, .navLinkLogo:hover, .navDrop:hover, .navDropContent:hover, .navLink:hover, .footerLink:hover
 {
     background-color: #201835;
