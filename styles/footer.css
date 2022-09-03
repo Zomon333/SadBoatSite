@@ -1,0 +1,13 @@
+.footer
+{
+    position:fixed;
+    height:20vh;
+    width:100vw;
+}
+
+.footerContent
+{
+    background-color: #503A82;
+    margin-top: -1vh;
+    height:10vh;
+}
