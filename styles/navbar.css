@@ -28,6 +28,9 @@
 
 .navbarButton
 {
+    transition: background-color 0.4s ease-in-out;
+    border-radius: 3vh;
+
     text-shadow: 0vw 0vw 1vw black;
 
     margin-top: 0vh;
