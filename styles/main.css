@@ -1,4 +1,6 @@
-*{ 
+@media screen and (min-width: 761px)
+{
+    *{ 
     overflow: hidden;
     margin: 0 0 0 0;
     
@@ -6,30 +8,47 @@
     font-size: 2.4vh;
     letter-spacing: 0.1vh;
     color:white;
+    }
+
+    .bTeal
+    {
+        background-color: #28AE9F;
+    }
+
+    .bPurple
+    {
+        background-color: #503A82;
+    }
+
+    .background
+    {
+        min-width: 100vw;
+        min-height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    h1 {
+        font-size: 5vh;
+    }
+
+    .noscreen
+    {
+        display: none;
+        visibility: hidden;
+    }
 }
 
-.bTeal
+@media screen and (max-width: 763px)
 {
-    background-color: #28AE9F;
+    .screen
+    {
+        display: none;
+        visibility: hidden;
+    }
+
+    .noscreen
+    {
+        display:block;
+    }
 }
-
-.bPurple
-{
-    background-color: #503A82;
-}
-
-.background
-{
-    min-width: 100vw;
-    min-height: 100vh;
-    max-width: 100vw;
-    max-height: 100vh;
-}
-
-h1 {
-    font-size: 5vh;
-}
-
-
-
-

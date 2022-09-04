@@ -20,32 +20,40 @@
 
     </head>
     <body>
-        <section class="background bTeal">
-            <div class="navbar bPurple"> <!--Navbar consumes 7vh-->
-                <strong>
-                    <button onclick="home()" class="navbarButton navbarLeft">SadBoat</button>
-                    <button onclick="home()"  class="navbarButton navbarRight">Home</button>
-                    <button onclick="news()"  class="navbarButton navbarRight">News</button>
-                    <button onclick="about()"  class="navbarButton navbarRight">About Us</button>
-                    <button onclick="contact()"  class="navbarButton navbarRight">Contact Us</button>
-                    <button onclick="store()"  class="navbarButton navbarRight">Store</button>
-                </strong>
-            </div>
-
-
-            <section id="contents" class="content"><!-- Content should be 74vh-->
-                <iframe id="contentBox" src="subpages/home.html" name="content" allowfullscreen="false" loading="eager" class="included content"></iframe>
-            </section>
-
-
-            <section class="footer"> <!--Footer consumes 19vh-->
-                <div class="footerSplash">
-                    <svg id="wave" style="transform:rotate(0deg); transition: 0.3s; width:100vw; height:10vh;" preserveAspectRatio="none"; viewBox="0 0 1440 130" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(80, 58, 130, 1)" offset="0%"></stop><stop stop-color="rgba(32, 24, 53, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,52L20,49.8C40,48,80,43,120,36.8C160,30,200,22,240,17.3C280,13,320,13,360,30.3C400,48,440,82,480,80.2C520,78,560,39,600,34.7C640,30,680,61,720,80.2C760,100,800,108,840,112.7C880,117,920,117,960,97.5C1000,78,1040,39,1080,39C1120,39,1160,78,1200,86.7C1240,95,1280,74,1320,69.3C1360,65,1400,78,1440,69.3C1480,61,1520,30,1560,15.2C1600,0,1640,0,1680,19.5C1720,39,1760,78,1800,78C1840,78,1880,39,1920,36.8C1960,35,2000,69,2040,82.3C2080,95,2120,87,2160,71.5C2200,56,2240,35,2280,36.8C2320,39,2360,65,2400,69.3C2440,74,2480,56,2520,41.2C2560,26,2600,13,2640,6.5C2680,0,2720,0,2760,2.2C2800,4,2840,9,2860,10.8L2880,13L2880,130L2860,130C2840,130,2800,130,2760,130C2720,130,2680,130,2640,130C2600,130,2560,130,2520,130C2480,130,2440,130,2400,130C2360,130,2320,130,2280,130C2240,130,2200,130,2160,130C2120,130,2080,130,2040,130C2000,130,1960,130,1920,130C1880,130,1840,130,1800,130C1760,130,1720,130,1680,130C1640,130,1600,130,1560,130C1520,130,1480,130,1440,130C1400,130,1360,130,1320,130C1280,130,1240,130,1200,130C1160,130,1120,130,1080,130C1040,130,1000,130,960,130C920,130,880,130,840,130C800,130,760,130,720,130C680,130,640,130,600,130C560,130,520,130,480,130C440,130,400,130,360,130C320,130,280,130,240,130C200,130,160,130,120,130C80,130,40,130,20,130L0,130Z"></path></svg>
+        <section class="screen">
+            <section class="background bTeal">
+                <div class="navbar bPurple"> <!--Navbar consumes 7vh-->
+                    <strong>
+                        <button onclick="home()" class="navbarButton navbarLeft">SadBoat</button>
+                        <button onclick="home()"  class="navbarButton navbarRight">Home</button>
+                        <button onclick="news()"  class="navbarButton navbarRight">News</button>
+                        <button onclick="about()"  class="navbarButton navbarRight">About Us</button>
+                        <button onclick="contact()"  class="navbarButton navbarRight">Contact Us</button>
+                        <button onclick="store()"  class="navbarButton navbarRight">Store</button>
+                    </strong>
                 </div>
-                <div class="footerContent">
-                    <button onclick="copyright()"  class="footerButton navbarButton navbarRight">Copyright & Legal</button>
-                </div>
+
+
+                <section id="contents" class="content"><!-- Content should be 74vh-->
+                    <iframe id="contentBox" src="subpages/home.html" name="content" allowfullscreen="false" loading="eager" class="included content"></iframe>
+                </section>
+
+
+                <section class="footer"> <!--Footer consumes 19vh-->
+                    <div class="footerSplash">
+                        <svg id="wave" style="transform:rotate(0deg); transition: 0.3s; width:100vw; height:10vh;" preserveAspectRatio="none"; viewBox="0 0 1440 130" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(80, 58, 130, 1)" offset="0%"></stop><stop stop-color="rgba(32, 24, 53, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,52L20,49.8C40,48,80,43,120,36.8C160,30,200,22,240,17.3C280,13,320,13,360,30.3C400,48,440,82,480,80.2C520,78,560,39,600,34.7C640,30,680,61,720,80.2C760,100,800,108,840,112.7C880,117,920,117,960,97.5C1000,78,1040,39,1080,39C1120,39,1160,78,1200,86.7C1240,95,1280,74,1320,69.3C1360,65,1400,78,1440,69.3C1480,61,1520,30,1560,15.2C1600,0,1640,0,1680,19.5C1720,39,1760,78,1800,78C1840,78,1880,39,1920,36.8C1960,35,2000,69,2040,82.3C2080,95,2120,87,2160,71.5C2200,56,2240,35,2280,36.8C2320,39,2360,65,2400,69.3C2440,74,2480,56,2520,41.2C2560,26,2600,13,2640,6.5C2680,0,2720,0,2760,2.2C2800,4,2840,9,2860,10.8L2880,13L2880,130L2860,130C2840,130,2800,130,2760,130C2720,130,2680,130,2640,130C2600,130,2560,130,2520,130C2480,130,2440,130,2400,130C2360,130,2320,130,2280,130C2240,130,2200,130,2160,130C2120,130,2080,130,2040,130C2000,130,1960,130,1920,130C1880,130,1840,130,1800,130C1760,130,1720,130,1680,130C1640,130,1600,130,1560,130C1520,130,1480,130,1440,130C1400,130,1360,130,1320,130C1280,130,1240,130,1200,130C1160,130,1120,130,1080,130C1040,130,1000,130,960,130C920,130,880,130,840,130C800,130,760,130,720,130C680,130,640,130,600,130C560,130,520,130,480,130C440,130,400,130,360,130C320,130,280,130,240,130C200,130,160,130,120,130C80,130,40,130,20,130L0,130Z"></path></svg>
+                    </div>
+                    <div class="footerContent">
+                        <button onclick="copyright()"  class="footerButton navbarButton navbarRight">Copyright & Legal</button>
+                    </div>
+                </section>
             </section>
+        </section>
+        <section class="noscreen">
+            <h1>Mobile site in development.</h1>
+            <p>
+                Please view on desktop.
+            </p>
         </section>
     </body>
 </html>
