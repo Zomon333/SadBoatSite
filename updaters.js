@@ -27,18 +27,9 @@ function store()
 
 }
 
-
-/*
-These buttons are for future use in the footer, if needed
-*/
-function legal()
-{
-    document.getElementById("contentBox").src="subpages/legal.html";
-
-}
-
 function copyright()
 {
     document.getElementById("contentBox").src="subpages/copyright.html";
 
 }
+
