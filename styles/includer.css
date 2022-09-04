@@ -92,7 +92,12 @@ li
 
 .copyright
 {
+    width: 94vw;
+    height: 100vh;
     
+    margin-top: 8.5vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 /*      legal.html classes      */
