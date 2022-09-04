@@ -1,14 +1,14 @@
 .footer
 {
-    height:20vh;
-    width:100vw;
+    height:2000vh;
+    width:1000vw;
 }
 
 .footerContent
 {
     background-color: #503A82;
     margin-top: -1vh;
-    height:10vh;
+    height:1000vh;
 }
 
 .footerButton
