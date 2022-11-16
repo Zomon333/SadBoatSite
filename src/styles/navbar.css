@@ -22,9 +22,7 @@
 .navbarButton:hover
 {
     cursor:pointer;
-    background-color: #201835;
 }
-
 
 .navbarButton
 {
@@ -36,10 +34,6 @@
     margin-top: 0vh;
     margin-bottom: 0vh;
 
-    height: 7vh;
-    width: 10vw;
-
     padding: 0;
     border: none;
-    background: none;
 }
