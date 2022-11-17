@@ -5,7 +5,7 @@ const StyledCard = ({innerColor, outerColor, fontColor, title, titleSize, height
 {
   const InnerCard = ({children, fontColor, color, height, title, titleSize})=>{
     return (<>
-     <Card style={{backgroundColor:color, height:height}}>
+     <Card style={{backgroundColor:color, height:height, padding:"0.7em"}}>
         <CardContent style={{height:"90%"}}>
           <Typography color={fontColor} align={"left"} variant={titleSize}>
             <strong>{title}</strong>

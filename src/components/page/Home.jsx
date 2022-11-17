@@ -11,7 +11,7 @@ export const Home = ()=>{
     const cardInnerColor="#272635ff";
     const cardOuterColor="#e8e9f3ff";
 
-    const Left = <StyledCard innerColor={cardInnerColor} outerColor={cardOuterColor} fontColor="#e8e9f3ff" height="15em" titleSize={"h5"} title={"Dagan Poulin"}>
+    const Left = <StyledCard innerColor={cardInnerColor} outerColor={cardOuterColor} fontColor="#e8e9f3ff" height="17em" titleSize={"h5"} title={"Dagan Poulin"}>
       <Box style={{height:"6.5em"}}>
         Developer, Programmer, Web Designer.
       </Box>
@@ -25,7 +25,7 @@ export const Home = ()=>{
   
     </StyledCard>;
   
-    const Mid = <StyledCard innerColor={cardInnerColor} outerColor={cardOuterColor} fontColor="#e8e9f3ff" height="15em" titleSize={"h5"} title={"Justice Guillory"}>
+    const Mid = <StyledCard innerColor={cardInnerColor} outerColor={cardOuterColor} fontColor="#e8e9f3ff" height="17em" titleSize={"h5"} title={"Justice Guillory"}>
       <Box style={{height:"6.5em"}}>
         Developer, Programmer, Physics Specialist.
       </Box>
@@ -38,7 +38,7 @@ export const Home = ()=>{
       </Box>
     </StyledCard>;
   
-    const Right = <StyledCard innerColor={cardInnerColor} outerColor={cardOuterColor} fontColor="#e8e9f3ff" height="15em" titleSize={"h6"} title={"We're currently looking for artists and musicians!"}>
+    const Right = <StyledCard innerColor={cardInnerColor} outerColor={cardOuterColor} fontColor="#e8e9f3ff" height="17em" titleSize={"h6"} title={"We're currently looking for artists and musicians!"}>
       <Box style={{height:"6.5em"}}>
         We're looking to commission artists and musicians with flexible work requirements.
       </Box>

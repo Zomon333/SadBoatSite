@@ -1,13 +1,14 @@
-import Home from './pages/Home.js'
-import News from './pages/News.js'
-import About from './pages/About.js'
-import Contact from './pages/Contact.js'
-import Store from './pages/Store.js'
-import Unknown from './pages/Unknown.js'
+import Home from '../page/Home.jsx'
+import News from '../page/News.jsx'
+import About from '../page/About.jsx'
+import Contact from '../page/Contact.jsx'
+import Store from '../page/Store.jsx'
+import Legal from '../page/Legal.jsx'
+import Unknown from '../page/Unknown.jsx'
 
-export default function Paginator(page)
+export default function Paginator({children})
 {
-    switch (page) 
+    switch (children) 
     {
         case "home":
             return <Home />;
@@ -23,6 +24,9 @@ export default function Paginator(page)
         
         case "store":
             return <Store />;
+
+        case "legal":
+            return <Legal />;
     
         default:
             return <Unknown />
