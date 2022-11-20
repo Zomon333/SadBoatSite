@@ -1,108 +1,83 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { Button, Box, ButtonGroup, Typography, Divider, TextField } from '@mui/material';
-
-import Paginator from './logical/PageReducer';
+import { Button, Box, Typography, TextField, } from '@mui/material';
 
 import {Navbar, MenuButton} from './structural/Navbar';
-
-import About from './page/About';
-import Contact from './page/Contact';
-import Home from './page/Home';
-import Legal from './page/Legal';
-import News from './page/News';
-import Store from './page/Store';
-import Unknown from './page/Unknown';
-
+import Paginator from './logical/PageReducer';
 import Footer from './structural/Footer';
 
-import '../styles/colors.css'
+export const colors = {
+  paleWhite:"#e8e9f3",
+  greige:"#a6a6a8",
+  frost:"#b1e5f2",
+  ocean:"#2187b4",
+  sadTeal:"#28ae9f",
+  sadPurp:"#583f82",
+  stone:"#3f3d41",
+  navyBlue:"#272d41",
+  coal:"#272635ff",
+  abyss:"201835"
+}
+
+const Login = ({loginJSON={loggedIn: false, setLoggedIn: ()=>{} }})=>{
+
+  return (<>
+    {(!loginJSON.loggedIn) ?
+    <Box>
+      <Typography color={colors.paleWhite} variant="h5" style={{marginTop:"0.5em", marginBottom:"0.5em"}}>
+        Login
+      </Typography>
+      <Typography color={colors.paleWhite} variant="caption" style={{marginTop:"0.5em", marginBottom:"0.5em"}}>
+        Login temporarily disabled.
+      </Typography>
+
+      <Box style={{marginTop:"1em"}}>
+        <Typography color={colors.paleWhite} variant="caption" style={{marginTop:"0.5em"}}>
+          Username:
+        </Typography>
+        <TextField required disabled fullWidth size="small" style={{backgroundColor:colors.stone}} variant="filled" label="Username" margin="dense"></TextField>
+        
+        <Typography color={colors.paleWhite} variant="caption" style={{marginTop:"0.5em"}}>
+          Password:
+        </Typography>
+        <TextField required disabled fullWidth size="small" style={{backgroundColor:colors.stone}} variant="filled" label="Password" margin="dense"></TextField>
+      
+        <Button fullWidth={true} disabled={true} textColor={colors.paleWhite} style={{backgroundColor:colors.stone, marginTop:"1em"}}>Login</Button>
+      </Box>
+    </Box>
+    : 
+    <Box>
+
+    </Box>
+    }
+  </>);
+}
 
 function App() {
-  /*
-    Color Control
-    ------------------------------------------
-  */
-  //Color of the navbar
-  const navbarColor="#272635ff";
-  const sidebarColor="#272635ff";
-
-  const darkGray="#272635ff";
-  const paleWhite="#e8e9f3ff";
-
-  //Describes the background of the app
-  const [bgColor, setBgColor] = useState("#3f3d4a");
-
-
   /*
     Page Control
     ---------------------------------------------
   */
   const [page, setPage] = useState("home");
 
+  useEffect(()=>{
+    /*
+      Do something when the page changes
+    */
+  },[page])
+
   return (<>
-  <section style={{backgroundColor:bgColor, width:"100vw", minHeight:"110vh", paddingBottom:"5em"}}>
-    <Navbar buttonAttribs={{buttonColor:bgColor, textColor:paleWhite}} setPage={setPage} navbarColor={navbarColor} sidebarColor={sidebarColor}>
-      <Typography color={paleWhite} variant="h5" style={{marginTop:"0.5em", marginBottom:"0.5em"}}>
-        Login
-      </Typography>
-      <Typography color={paleWhite} variant="caption" style={{marginTop:"0.5em", marginBottom:"0.5em"}}>
-        Login temporarily disabled.
-      </Typography>
-
-      <Box style={{marginTop:"1em"}}>
-        <Typography color={paleWhite} variant="caption" style={{marginTop:"0.5em"}}>
-          Username:
-        </Typography>
-        <TextField required={true} size="small" style={{backgroundColor:bgColor}} fullWidth={true} variant="filled" label="Username" disabled={true} margin="dense"></TextField>
-        
-        <Typography color={paleWhite} variant="caption" style={{marginTop:"0.5em"}}>
-          Password:
-        </Typography>
-        <TextField required={true} size="small" style={{backgroundColor:bgColor}} fullWidth={true} variant="filled" label="Password" disabled={true} margin="dense"></TextField>
-      
-        <Button fullWidth={true} disabled={true} textColor={paleWhite} style={{backgroundColor:bgColor, marginTop:"1em"}}>Login</Button>
-      </Box>
-      
-      <Typography color={paleWhite} variant="h5" style={{marginTop:"2.5em", marginBottom:"0.5em"}}>
-        Pages
-      </Typography>
-      <ButtonGroup fullWidth={true} orientation="vertical">
-        <MenuButton onClick={()=>{setPage("home")}} buttonAttribs={{buttonColor:bgColor, textColor:paleWhite}} >
-          Home
-        </MenuButton>
-        
-        <Divider />
-        <MenuButton onClick={()=>{setPage("news")}} buttonAttribs={{buttonColor:bgColor, textColor:paleWhite}} >
-          News
-        </MenuButton>
-        
-        <Divider />
-        <MenuButton onClick={()=>{setPage("about")}} buttonAttribs={{buttonColor:bgColor, textColor:paleWhite}} >
-          About Us
-        </MenuButton>
-        
-        <Divider />
-        <MenuButton onClick={()=>{setPage("contact")}} buttonAttribs={{buttonColor:bgColor, textColor:paleWhite}} >
-          Contact Us
-        </MenuButton>
-
-        <Divider />
-        <MenuButton onClick={()=>{setPage("store")}} buttonAttribs={{buttonColor:bgColor, textColor:paleWhite}} >
-          Store
-        </MenuButton>
-      </ButtonGroup>
-
+  <section style={{backgroundColor:colors.stone, width:"100vw", minHeight:"110vh", paddingBottom:"5em"}}>
+    <Navbar setPage={setPage} >
+      <Login />
     </Navbar>
 
-    <Paginator>
-      {page}
-    </Paginator>
+    <Paginator prop={page} />
 
   </section>
   <Footer>
       <br />
-      <MenuButton buttonAttribs={{buttonColor:bgColor, textColor:paleWhite}} onClick={()=>setPage("legal")}>
+      <MenuButton onClick={()=>setPage("legal")}>
         Legal
       </MenuButton>
   </Footer>

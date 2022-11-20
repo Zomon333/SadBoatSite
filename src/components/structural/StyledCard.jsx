@@ -1,36 +1,61 @@
 import React from 'react'
 import { Card, CardContent, Typography, Divider } from '@mui/material';
 
-const StyledCard = ({innerColor, outerColor, fontColor, title, titleSize, height, children}) =>
+import { colors } from '../App';
+
+const StyledCard = ({title="", titleSize="h6", height="75%", children, stretchy=false}) =>
 {
-  const InnerCard = ({children, fontColor, color, height, title, titleSize})=>{
-    return (<>
-     <Card style={{backgroundColor:color, height:height, padding:"0.7em"}}>
-        <CardContent style={{height:"90%"}}>
-          <Typography color={fontColor} align={"left"} variant={titleSize}>
-            <strong>{title}</strong>
-          </Typography>
-          <Divider variant={"fullWidth"} />
-          <Typography color={fontColor} style={{marginTop:"1em"}} align={"left"}>
-            {children}
-          </Typography>
-        </CardContent>
-      </Card>
-    
+  const InnerCard = ({children, height, title, titleSize, stretchy})=>{
+    return (stretchy) ? (<>
+      {/* Card is Stretchy; it should be able to resize. */}
+      <Card style={{backgroundColor:colors.coal, minHeight:height, padding:"0.7em"}}>
+          <CardContent style={{height:"90%"}}>
+            <Typography color={colors.paleWhite} align={"left"} variant={titleSize}>
+              <strong>{title}</strong>
+            </Typography>
+            <Divider variant={"fullWidth"} />
+            <Typography color={colors.paleWhite} style={{marginTop:"1em"}} align={"left"}>
+              {children}
+            </Typography>
+          </CardContent>
+        </Card>
+        
+    </>) : (<> 
+      {/* Card is *not* Stretchy; it cannot resize. */}
+      <Card style={{backgroundColor:colors.coal, height:height, padding:"0.7em"}}>
+          <CardContent style={{height:"90%"}}>
+            <Typography color={colors.paleWhite} align={"left"} variant={titleSize}>
+              <strong>{title}</strong>
+            </Typography>
+            <Divider variant={"fullWidth"} />
+            <Typography color={colors.paleWhite} style={{marginTop:"1em"}} align={"left"}>
+              {children}
+            </Typography>
+          </CardContent>
+        </Card>
+
     </>);
   }
 
-  const OuterCard = ({children, color, height})=>{
-    return (<>
-      <Card style={{paddingLeft:"0.33em", height:height, backgroundColor:color, marginTop:"1em"}}>
-        {children}
-      </Card>
+  const OuterCard = ({children, height, stretchy})=>{
+    return (stretchy) ? (<>
+        {/* Card is Stretchy; it should be able to resize. */}
+        <Card style={{paddingLeft:"0.33em", minHeight:height, backgroundColor:colors.sadTeal, marginTop:"1em"}}>
+          {children}
+        </Card>
+
+      </>) : (<>
+        {/* Card is *not* Stretchy; it cannot resize. */}
+        <Card style={{paddingLeft:"0.33em", height:height, backgroundColor:colors.sadTeal, marginTop:"1em"}}>
+          {children}
+        </Card>
+
     </>);
   }
 
   return (
-    <OuterCard color={outerColor} height={height}>
-      <InnerCard fontColor={fontColor} color={innerColor} height={height} title={title} titleSize={titleSize}>
+    <OuterCard height={height} stretchy={stretchy}>
+      <InnerCard height={height} title={title} titleSize={titleSize} stretchy={stretchy}>
         {children}
       </InnerCard>
     </OuterCard>
