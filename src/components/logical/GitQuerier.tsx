@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Box, Link, Typography, Card, IconButton } from '@mui/material';
+import { Box, Link, Typography, Card, IconButton, CircularProgress } from '@mui/material';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
@@ -221,9 +221,9 @@ export const GitQuerier = ()=>{
                             </GitCommit>                    
 
 
-                            </> : <></>}</>);
+                            </> : <><CircularProgress style={{margin:"1em",marginLeft:"32.5vw"}} /></>}</>);
                     }
-                )) : <></> 
+                )) : <><CircularProgress style={{margin:"1em",marginLeft:"32.5vw"}} /></> 
             }
             
         </Box>
