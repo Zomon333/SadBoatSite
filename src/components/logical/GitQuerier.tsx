@@ -188,7 +188,7 @@ export const GitQuerier = ()=>{
                         {(!overLimit) ? 
 
                         <>
-                            <IconButton onClick={()=>{if((page)>0){setPage(page-1);}}}>
+                            <IconButton onClick={()=>{if((page)>1){setPage(page-1);}}}>
                                 <ArrowCircleLeftIcon sx={{color:colors.paleWhite}} fontSize="large" />
                             </IconButton>
 
