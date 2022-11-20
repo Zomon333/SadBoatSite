@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Box, Link, Typography, Card, IconButton, CircularProgress } from '@mui/material';
+import { Box, Link, Typography, Card, IconButton, CircularProgress, Fade } from '@mui/material';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
@@ -104,33 +104,35 @@ export const GitCommit = ({author, date, URL, children})=>{
     const charLimit=80;
 
     return (<>
-        <Link underline="none" href={URL}>
-            <Box>
-                <Card style={{margin:"2em", height:"7em", paddingLeft:"0.33em", marginRight:"25vw", backgroundColor:colors.ocean}}>
-                    <Card style={{width:"100%", height:"100%", margin:"0%", padding:"1em", backgroundColor:colors.coal}}>
-                        <Typography style={{maxWidth:"60vw", overflowX:"hidden"}} variant="overline" fontSize={"1.2em"} color={colors.paleWhite}>
-                            {((children as string).length < charLimit ) ? children : ((children as string).substring(0,(charLimit-1)).concat("..."))}
+        <Fade in={true} timeout={750}>
+            <Link underline="none" href={URL}>
+                <Box>
+                    <Card style={{margin:"2em", height:"7em", paddingLeft:"0.33em", marginRight:"25vw", backgroundColor:colors.ocean}}>
+                        <Card style={{width:"100%", height:"100%", margin:"0%", padding:"1em", backgroundColor:colors.coal}}>
+                            <Typography style={{maxWidth:"60vw", overflowX:"hidden"}} variant="overline" fontSize={"1.2em"} color={colors.paleWhite}>
+                                {((children as string).length < charLimit ) ? children : ((children as string).substring(0,(charLimit-1)).concat("..."))}
 
-                            <br />
-                        </Typography>
-                        <Typography style={{float:"left"}} variant="overline" fontSize={"0.8em"} color={colors.paleWhite}>
-                            <Box style={{minWidth:"30vw"}}>
+                                <br />
+                            </Typography>
+                            <Typography style={{float:"left"}} variant="overline" fontSize={"0.8em"} color={colors.paleWhite}>
+                                <Box style={{minWidth:"30vw"}}>
+                                    
+                                    <div style={{float:"left"}}>
+                                        Authored By: {author}  
+                                    </div>
+                                    <div style={{float:"right"}}>
+                                        Committed On: {date}  
+                                    </div>
+                                    
+                                </Box>
                                 
-                                <div style={{float:"left"}}>
-                                    Authored By: {author}  
-                                </div>
-                                <div style={{float:"right"}}>
-                                    Committed On: {date}  
-                                </div>
-                                
-                            </Box>
-                            
-                        </Typography>
-                       
+                            </Typography>
+                        
+                        </Card>
                     </Card>
-                </Card>
-            </Box>
-        </Link>
+                </Box>
+            </Link>
+        </Fade>
     </>);
 }
 
@@ -179,7 +181,7 @@ export const GitQuerier = ()=>{
     },[page]);
 
     return (<>
-        <Box style={{minHeight:"50em"}}>
+        <Box style={{height:"60em"}}>
             <Box style={{padding:"2em", margin:"0em", paddingBottom:"0em", paddingTop:"4em"}}>
                 <StyledCard title="Recent Commits" titleSize="h4" height="10em" stretchy={false}>
                     <Typography variant="h6">
@@ -213,12 +215,12 @@ export const GitQuerier = ()=>{
                             {hasLoaded ? 
                             <>
 
-                            <GitCommit
-                                author={r.commit.author.name}
-                                date={r.commit.author.date}
-                                URL={r.html_url}>
-                                {r.commit.message}        
-                            </GitCommit>                    
+                                <GitCommit
+                                    author={r.commit.author.name}
+                                    date={r.commit.author.date}
+                                    URL={r.html_url}>
+                                    {r.commit.message}        
+                                </GitCommit>               
 
 
                             </> : <><CircularProgress style={{margin:"1em",marginLeft:"32.5vw"}} /></>}</>);
