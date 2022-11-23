@@ -86,7 +86,40 @@ const Update=({children})=>{
 export const articles:  articleData[] = [
     
     
-    
+    {
+        header: {
+            username:"Dagan Poulin",
+            title: "Minor Release 0.02.9V",
+            postedOn: {
+                postDay: 23,
+                postMonth: 10,
+                postYear: 2022,
+
+                postHour: 0,
+                postMinute: 2,
+                postSecond: 0,
+            }
+        },
+        content: <>
+            <List>
+                <Update>
+                    Vulkan Instance class written. Mostly boilerplate, but functional.
+                </Update>
+                <Finished>
+                    Default constructor provides most initial startup values for easy testing.
+                </Finished>
+                <Finished>
+                    Wrote exceptions for Instance class in the event it does not launch.
+                </Finished>
+                
+
+                <Generic></Generic>
+                <TBD>
+                    Next release will be 0.03.0V with a Vector implementation and prototype math and materials.
+                </TBD>
+            </List>
+        </>,
+    },
     {
         header: {
             username:"Dagan Poulin",
