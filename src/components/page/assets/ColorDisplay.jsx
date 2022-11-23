@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Card, CardActionArea} from '@mui/material';
+import {Card, CardActionArea} from '@mui/material';
 
 export const ColorDisplay =({children, setters={setR:(()=>{}), setG:(()=>{}), setB:(()=>{})}})=>
 {

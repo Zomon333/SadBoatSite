@@ -1,9 +1,8 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import {Grid, Card, Slider, Typography, Button, TextField} from '@mui/material';
 
 import ColorDisplay from './ColorDisplay';
-import TriColumn from '../../structural/TriColumn';
 
 export const ColorPicker = ({values={r:0,g:0,b:0}, setters={setR:(()=>{}), setG:(()=>{}), setB:(()=>{})}})=>{
 

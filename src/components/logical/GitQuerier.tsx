@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Box, Link, Typography, Card, IconButton, CircularProgress, Fade } from '@mui/material';
+import { Box, Link, Typography, Card, IconButton, CircularProgress, Fade, Switch } from '@mui/material';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
@@ -99,11 +99,11 @@ type gitAPICommit =
     };
   
 
-export const GitCommit = ({author, date, URL, children})=>{
+export const GitCommit = ({slim=false, author, date, URL, children})=>{
 
     const charLimit=80;
 
-    return (<>
+    return ( !slim ? <>
         <Fade in={true} timeout={750}>
             <Link underline="none" href={URL}>
                 <Box>
@@ -133,12 +133,32 @@ export const GitCommit = ({author, date, URL, children})=>{
                 </Box>
             </Link>
         </Fade>
+    </> : <>
+    
+    <Link underline="none" href={URL}>
+                <Box>
+                    <Card style={{margin:"1em", marginLeft:"2em", height:"3em", paddingLeft:"0.33em", marginRight:"50vw", backgroundColor:colors.ocean}}>
+                        <Card style={{width:"100%", height:"100%", margin:"0%", padding:"0.1em", paddingLeft:"1em", backgroundColor:colors.coal}}>
+                            <Typography style={{float:"left", maxWidth:"60vw", overflowX:"hidden", padding:"0.1em"}} variant="overline" fontSize={"0.7em"} color={colors.paleWhite}>
+                                {((children as string).length < charLimit ) ? children : ((children as string).substring(0,(charLimit-1)).concat("..."))}
+                            </Typography>
+                            <Typography style={{float:"right", maxWidth:"60vw", overflowX:"hidden", padding:"0.1em", marginRight:"5em"}} variant="overline" fontSize={"0.7em"} color={colors.paleWhite}>
+                                By {author} on {date}.
+                            </Typography>
+                        </Card>
+                    </Card>
+                </Box>
+            </Link>
+
+    
+    
     </>);
 }
 
 export const GitQuerier = ()=>{
     
-    const perPage = 5;
+    const [perPage, setPerPage] = useState(5);
+    const [slim, setSlim] = useState(false);
     
     const [page, setPage] = useState(1);
 
@@ -178,7 +198,18 @@ export const GitQuerier = ()=>{
                 setHasLoaded(true);
             }
         );
-    },[page]);
+    },[page, perPage, slim]);
+
+    useEffect(()=>{
+        if(slim)
+        {
+            setPerPage(20);
+        }
+        else
+        {
+            setPerPage(5);
+        }
+    },[slim]);
 
     return (<>
         <Box style={{height:"60em"}}>
@@ -186,6 +217,7 @@ export const GitQuerier = ()=>{
                 <StyledCard title="Recent Commits" titleSize="h4" height="10em" stretchy={false}>
                     <Typography variant="h6">
 
+                        <Switch checked={slim} onChange={()=>{setSlim(!slim)}}></Switch>
 
                         {(!overLimit) ? 
 
@@ -208,27 +240,57 @@ export const GitQuerier = ()=>{
                     </Typography>
                 </StyledCard>
             </Box>
-            {         
-                (hasLoaded && (!overLimit)) ? (commits.map(
-                    (r: gitAPICommit)=>{
-                        return (<>
-                            {hasLoaded ? 
-                            <>
-
-                                <GitCommit
-                                    author={r.commit.author.name}
-                                    date={r.commit.author.date}
-                                    URL={r.html_url}>
-                                    {r.commit.message}        
-                                </GitCommit>               
-
-
-                            </> : <><CircularProgress style={{margin:"1em",marginLeft:"32.5vw"}} /></>}</>);
-                    }
-                )) : <><CircularProgress style={{margin:"1em",marginLeft:"32.5vw"}} /></> 
-            }
             
-        </Box>
+            { !slim ? <>
+                {         
+                    (hasLoaded && (!overLimit)) ? (commits.map(
+                        (r: gitAPICommit)=>{
+                            return (<>
+                                {hasLoaded ? 
+                                <>
+
+                                    <GitCommit
+                                        slim={slim}
+                                        author={r.commit.author.name}
+                                        date={r.commit.author.date}
+                                        URL={r.html_url}>
+                                        {r.commit.message}        
+                                    </GitCommit>               
+
+
+                                </> : <><CircularProgress style={{margin:"1em",marginLeft:"32.5vw"}} /></>}</>);
+                        }
+                    )) : <><CircularProgress style={{margin:"1em",marginLeft:"32.5vw"}} /></> 
+                }
+            </>:<>
+                <Grid container xs={2}>
+
+                    {
+                        (hasLoaded && (!overLimit)) ? (commits.map(
+                            (r: gitAPICommit)=>{
+                                return (<>
+                                    {hasLoaded ? 
+                                    <>
+
+                                        <GitCommit
+                                            slim={slim}
+                                            author={r.commit.author.name}
+                                            date={r.commit.author.date}
+                                            URL={r.html_url}>
+                                            {r.commit.message}        
+                                        </GitCommit>               
+
+
+                                    </> : <><CircularProgress style={{margin:"1em",marginLeft:"32.5vw"}} /></>}</>)
+                        }
+                    }
+                    
+
+                </Grid>
+            
+            
+            </>}
+            </Box>
     </>);
 }
 
