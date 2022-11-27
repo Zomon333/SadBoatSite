@@ -16,7 +16,7 @@ export const colors = {
   sadPurp:"#583f82",
   stone:"#3f3d41",
   navyBlue:"#272d41",
-  coal:"#272635ff",
+  coal:"#272635",
   abyss:"201835"
 }
 
